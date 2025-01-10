@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+<div class="menu-container">
+        <nav>
+            <span class="menu-icon">
+                <i class="fas fa-heart"></i>
+            </span>
+            <a href="#home">Home</a>
+            <a href="#information">Information</a>
+            <a href="#graph">Graph</a>
+            <a href="#form">Form</a>
+            <a href="#contact">Contact</a>
+        </nav>
+</div>
+
+    <!-- Form Section -->
+    <div class="form-container">
+        <div class="form-header">
+            <h2 align="center">Fill in your details:</h2>
+        </div>
+    <div class="container">
+        <h1>Heart Disease Prediction Form</h1>
+
+        <form method="POST" action="/predict">
+            <label for="age">Age:</label>
+            <input type="number" name="age" required>
+
+            <label for="cholesterol">Cholesterol:</label>
+            <input type="number" name="cholesterol" required>
+
+            <label for="resting_bp">Resting Blood Pressure:</label>
+            <input type="number" name="resting_bp" required>
+
+            <label for="max_hr">Maximum Heart Rate:</label>
+            <input type="number" name="max_hr" required>
+
+            <label for="exercise_angina">Exercise Angina (1=Yes, 0=No):</label>
+            <input type="number" name="exercise_angina" required>
+
+            <label for="oldpeak">Oldpeak (ST depression induced by exercise relative to rest):</label>
+            <input type="number" name="oldpeak" required>
+
+            <label for="st_slope">Slope of the Peak Exercise ST Segment (0, 1, 2):</label>
+            <input type="number" name="st_slope" required>
+
+            <label for="fasting_bs">Fasting Blood Sugar (1=Yes, 0=No):</label>
+            <input type="number" name="fasting_bs" required>
+
+            <button type="submit" class="back-link">Predict</button>
+        </form>
+
+    </div>
+
+</body>
+</html>
